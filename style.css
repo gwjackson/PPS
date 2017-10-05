@@ -1,0 +1,43 @@
+body {
+    font-family: verdana, sans-serif;
+    font-size: 11px !important;
+}
+
+table {
+    border: 1px solid #bbb;
+    border-collapse: collapse;
+    margin: 40px auto;
+    width: 60%
+}
+
+td,
+tr,
+th {
+    border-bottom: 1px solid #bbb;
+    padding: 15px;
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right
+}
+
+.pr-0 {
+    padding-right: 0
+}
+
+.w-250p {
+    width: 250px
+}
+
+.w-20p {
+    width: 20px
+}
+
+.f-r {
+    float: right
+}
+
+.fw-b {
+    font-weight: bold
+}

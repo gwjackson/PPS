@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0015)http://pps.dev/ -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pps-proto-0-1-4</title>
+    <link rel="stylesheet" href="./pps-proto-0-1-4_files/normalize.css">
+    <link rel="stylesheet" href="./pps-proto-0-1-4_files/style.css">
+    <script type="text/javascript" src="./pps-proto-0-1-4_files/jquery.js"></script>
+    <script type="text/javascript" src="./pps-proto-0-1-4_files/form.js"></script>
+<script>
+$('.switch').on('click', function(e) {
+    $('.override').toggleClass("v-h"); //you can list several class names
+    e.preventDefault();
+});
+</script></head>
+
+
+<body>
+    <form name="risk" id="risk" action="http://pps.dev/pps-result.php" method="post" onsubmit="return validateForm()">
+        <h2>Question inputs interactions. See form.js dependency. Incomplete/needs testing.</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="2">Palliative Performance Scale (PPS) Risk Calculator</th>
+                </tr>
+                <tr>
+                    <td>Ambulation:</td>
+                    <td class="ta-r">
+                        <select name="q_1" id="q_1" class="w-250p">
+                            <option value="0">Choose an answer</option>
+                            <option value="1">Full</option>
+                            <option value="2">Reduced</option>
+                            <option value="3">Mainly sit/lie</option>
+                            <option value="4">Mainly in bed</option>
+                            <option value="5">Totally bed bound</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activity Level and Evidence of Disease:</td>
+                    <td class="ta-r">
+                        <select name="q_2" id="q_2" class="w-250p">
+                            <option value="0">Choose an answer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Self-Care Assistance:</td>
+                    <td class="ta-r">
+                        <select name="q_3" id="q_3" class="w-250p">
+                            <option value="0">Choose an answer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oral Intake:</td>
+                    <td class="ta-r">
+                        <select name="q_4" id="q_4" class="w-250p">
+                            <option value="0">Choose an answer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Level of Consciousness:</td>
+                    <td class="ta-r">
+                        <select name="q_5" id="q_5" class="w-250p">
+                            <option value="0">Choose an answer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ta-r pr-0"><b>PPS Level</b> (Calculated):</td>
+                    <td class="w-250p"><b>##%</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <h2>Default/Zero State. Child questions (2-5) inactive; become active/filled based on answers to parent question(s).</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">Palliative Performance Scale (PPS) Risk Calculator</th>
+            </tr>
+            <tr>
+                <td>Ambulation:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option>Choose an answer</option>
+                        <option>Full</option>
+                        <option>Reduced</option>
+                        <option>Mainly sit/lie</option>
+                        <option>Mainly in bed</option>
+                        <option>Totally bed bound</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Activity Level and Evidence of Disease:</td>
+                <td class="ta-r">
+                    <select disabled="" class="w-250p">
+                        <option>Choose an answer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Self-Care Assistance:</td>
+                <td class="ta-r">
+                    <select disabled="" class="w-250p">
+                        <option>Choose an answer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Oral Intake:</td>
+                <td class="ta-r">
+                    <select disabled="" class="w-250p">
+                        <option>Choose an answer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Level of Consciousness:</td>
+                <td class="ta-r">
+                    <select disabled="" class="w-250p">
+                        <option>Choose an answer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="ta-r pr-0"><b>PPS Level</b> (Calculated):</td>
+                <td class="w-250p"><b>##%</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Completed State. Auto calculates PPS and manifests "Override" inputs for clinician interpreted PPS.</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">Palliative Performance Scale (PPS) Risk Calculator</th>
+            </tr>
+            <tr>
+                <td>Ambulation:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option>Full</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Activity Level and Evidence of Disease:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option>Normal activity with effort, some evidence of disease</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Self-Care Assistance:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option>Full</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Oral Intake:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option>Normal or reduced</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Level of Consciousness:</td>
+                <td class="ta-r">
+                    <select class="w-250p">
+                        <option value="0">Full</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="ta-r pr-0"><b>PPS Level</b> (Calculated):</td>
+                <td class="w-250p"><b>80%</b>
+                    <div class="f-r">
+                        <input type="checkbox" checked="">
+                        <label>Override</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ta-r pr-0"><b>PPS Level</b> (Clinician):</td>
+                <td class="w-250p">
+                    <input type="text" class="fw-b w-20p" value="90"><b>%</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body></html>
